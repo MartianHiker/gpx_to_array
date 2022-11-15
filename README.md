@@ -16,7 +16,7 @@ const gpx_to_array = require("gpx_to_array")
 let result = gpx_to_array(xml_file_as_string)
 ```
 
-## Expected Outut
+## Expected Output
 
 You should expect the following JSON array to be returned after calling this package
 
