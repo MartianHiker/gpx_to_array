@@ -9,7 +9,7 @@ function transform_69_420 (gpx_file_as_string) {
     try {
       var xml = new XMLParser().parseFromString(gpx_file_as_string)
 
-      let coorddinates = []
+      let coordinates = []
       let errors = []
 
       xml.getElementsByTagName("trkpt").forEach( trkpt => {
@@ -23,10 +23,20 @@ function transform_69_420 (gpx_file_as_string) {
         if (trkpt.children.length > 0 && trkpt.children[0].name === "time")
           position[TIMESTAMP] = parseFloat(trkpt.children[0].value)
 
-        coorddinates.push(position)
+        coordinates.push(position)
+      })
+
+      coordinates.forEach(x => {
+        let last_index = x.length - 1
+        if(!x[last_index]) x.pop()
+      })
+
+      coordinates.forEach(x => {
+        let last_index = x.length - 1
+        if(!x[last_index]) x.pop()
       })
       
-      return {coorddinates: coorddinates, _params: {LON: 0, LAT: 1, ELEV: 2, TIMESTAMP: 3}, errors: errors}
+      return {coordinates: coordinates, _params: {LON: 0, LAT: 1, ELEV: 2, TIMESTAMP: 3}, errors: errors}
     } catch (e) {
       return {error_bool: true, error: e }
     }

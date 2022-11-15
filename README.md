@@ -21,9 +21,9 @@ let result = gpx_to_array(xml_file_as_string)
 You should expect the following JSON array to be returned after calling this package
 
 ```
-{coorddinates: [...], _params: {LON: 0, LAT: 1, ELEV: 2, TIMESTAMP: 3}, errors: errors}
+{coordinates: [...], _params: {LON: 0, LAT: 1, ELEV: 2, TIMESTAMP: 3}, errors: errors}
 ```
-### coorddinates
+### coordinates
 
 this is an array of array like the following:
 ```
@@ -31,7 +31,7 @@ this is an array of array like the following:
 ```
 ### what's the point of _params
 
-Params are needed so you don't need to remember the position of lat, lon and so on in the array. You can retrieve information from coorddinates like the following:
+Params are needed so you don't need to remember the position of lat, lon and so on in the array. You can retrieve information from coordinates like the following:
 
 
 ```

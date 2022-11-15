@@ -1,11 +1,11 @@
 {
   "name": "gpx_to_array",
-  "version": "2022.11.15",
+  "version": "2022.11.16.2",
   "description": "takes a gpx file as a string and returns the data as an array",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/cli.git"
+    "url": "https://github.com/MartianHiker/gpx_to_array"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
