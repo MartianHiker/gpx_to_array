@@ -5,12 +5,12 @@
 ## Install
 
 ```
-$ npm install gpx_to_array
+npm install gpx_to_array
 ```
 
 ## Usage Example
 
-The package is very straighforwarddsd and simple to use: 
+The package is very straighforward and simple to use: 
 ```
 const gpx_to_array = require("gpx_to_array")
 let result = gpx_to_array(xml_file_as_string)
